@@ -1,0 +1,3 @@
+{
+    "*.{ts,js}": ["yarn eslint --quiet --fix --ext .js,.ts", "yarn prettier --write"]
+}
