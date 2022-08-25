@@ -4,11 +4,11 @@ on:
     branches: 
       - develop
 jobs:
-  test:
+  check-aplication:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [16]    
+        node: [16.x]    
     steps:      
       - name: Copy repository
         uses: actions/checkout@v3
@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install yarn dependencies
+      - name: Install dependencies with yarn
         run: yarn install --frozen-lockfile
       
-      - name: Lint code
+      - name: Runt ESLint
         run: yarn lint
       
-      - name: Run tests
+      - name: Run Tests
         run: yarn test
