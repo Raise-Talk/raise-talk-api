@@ -28,7 +28,7 @@ jobs:
         run: yarn lint
       
       - name: Run Tests
-        run: yarn test
+        run: yarn test:cov
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
