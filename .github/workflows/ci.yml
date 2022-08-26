@@ -1,6 +1,6 @@
 name: ci-workflow
 on: 
-  push:
+  pull_request:
     branches: 
       - develop
 jobs:
